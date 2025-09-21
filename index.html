@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Henry Games — Download Paperclip Images</title>
+  <style>
+    :root {--bg:#f6f7fb; --card:#ffffff; --muted:#6b7280; --accent:#0ea5a2;}
+    html, body {margin:0; padding:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; background: var(--bg); color:#0f172a;}body {display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding:16px;}
+
+.brand {position:fixed; left:16px; top:12px; font-size:13px; font-weight:600; color:var(--muted); opacity:0.95;}
+
+header {display:flex; flex-direction:column; align-items:center; margin-top:28px; margin-bottom:22px;}
+h1 {margin:0; font-size:28px; letter-spacing:0.2px; text-align:center;}
+h2 {margin:6px 0 0 0; font-size:20px; color:var(--muted); text-align:center;}
+
+.cards {display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap:16px; width:100%; max-width:1000px; justify-items:center;}
+.card {width:100%; max-width:200px; background:var(--card); border-radius:12px; padding:12px; box-shadow:0 6px 18px rgba(15,23,42,0.06); display:flex; flex-direction:column; align-items:center;}
+.card .above {font-size:13px; color:var(--muted); margin-bottom:8px; text-align:center;}
+.card img {width:100%; height:120px; object-fit:cover; border-radius:8px; background:linear-gradient(90deg,#eef2ff,#fff);}
+.card button {margin-top:10px; padding:8px 12px; border-radius:8px; border:0; font-weight:600; cursor:pointer; width:100%;}
+.download {background:linear-gradient(90deg,var(--accent),#089e9a); color:white;}
+
+@media (max-width:560px){
+  .card img {height:100px;}
+  h1 {font-size:22px;}
+}
+
+  </style>
+</head>
+<body>
+  <div class="brand">Henry Games</div>  <header>
+    <h1 style="font-weight:700;font-size:34px">Download Paperclip Images</h1>
+    <h2>İndirilebilir ataç resimleri</h2>
+  </header>  <section class="cards" aria-label="Paperclip images"><article class="card">
+  <div class="above">bir adet ataç</div>
+  <img src="7.png" alt="Paperclip image 7" />
+  <a href="7.png" download="7.png"><button class="download">İndir</button></a>
+</article>
+
+<article class="card">
+  <div class="above">6 numaralı ataç</div>
+  <img src="6.png" alt="Paperclip image 6" />
+  <a href="6.png" download="6.png"><button class="download">İndir</button></a>
+</article>
+
+<article class="card">
+  <div class="above">yatay ataç</div>
+  <img src="5.png" alt="Paperclip image 5" />
+  <a href="5.png" download="5.png"><button class="download">İndir</button></a>
+</article>
+
+<article class="card">
+  <div class="above">bir yığın ataç</div>
+  <img src="4.png" alt="Paperclip image 4" />
+  <a href="4.png" download="4.png"><button class="download">İndir</button></a>
+</article>
+
+<article class="card">
+  <div class="above">fazla ataç</div>
+  <img src="3.png" alt="Paperclip image 3" />
+  <a href="3.png" download="3.png"><button class="download">İndir</button></a>
+</article>
+
+<article class="card">
+  <div class="above">birkaç tane ataç</div>
+  <img src="2.png" alt="Paperclip image 2" />
+  <a href="2.png" download="2.png"><button class="download">İndir</button></a>
+</article>
+
+<article class="card">
+  <div class="above">3 adet ataç</div>
+  <img src="1.png" alt="Paperclip image 1" />
+  <a href="1.png" download="1.png"><button class="download">İndir</button></a>
+</article>
+
+  </section><audio id="clickSound" src="soundclip.wav" preload="auto"></audio>
+
+  <script>
+    const buttons = document.querySelectorAll('.download');
+    const sound = document.getElementById('clickSound');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sound.currentTime = 0;
+        sound.play();
+      });
+    });
+  </script></body>
+</html>
